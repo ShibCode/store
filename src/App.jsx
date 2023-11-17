@@ -20,10 +20,7 @@ const smallScreenPaths = [
   { link: "/skate", linkName: "skate" },
 ];
 
-const largeScreenPaths = [
-  ...smallScreenPaths,
-  { link: "/all", linkName: "all" },
-];
+const largeScreenPaths = [...smallScreenPaths, { link: "/", linkName: "all" }];
 
 const App = () => {
   function getPaths() {
@@ -57,7 +54,7 @@ const App = () => {
           </>
         ) : (
           <Routes>
-            <Route path="/all" element={<Sidebar paths={paths} />} />
+            <Route path="/" element={<Sidebar paths={paths} />} />
             {paths.map(({ link, linkName: page }, index) => (
               <Route key={index} path={link} element={<Store page={page} />} />
             ))}

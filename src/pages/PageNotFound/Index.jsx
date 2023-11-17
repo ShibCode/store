@@ -5,7 +5,7 @@ const PageNotFound = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/all");
+    navigate("/");
   }, []);
 
   return;
