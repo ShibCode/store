@@ -2,14 +2,8 @@ import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Home = ({ isSmall }) => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (isSmall) navigate("/collections/all");
-  }, [isSmall]);
-
   return (
-    <div className="flex-1 flex flex-col justify-center gap-24 items-center bg-[url('/home-bg.webp')]  bg-no-repeat bg-cover">
+    <div className="flex-1 flex flex-col justify-center px-3 gap-16 sm:gap-24 items-center bg-[url('/home-bg.webp')]  bg-no-repeat bg-cover">
       <div className="flex flex-col gap-4 items-center text-white">
         <img src="/logo.png" alt="supreme" className="max-w-[120px]" />
         <span className="text-xs hidden md:inline">11/17/2023 06:36pm TYO</span>
